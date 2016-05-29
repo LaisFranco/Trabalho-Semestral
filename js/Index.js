@@ -50,3 +50,17 @@ var Index = {
 			TableController.addList(usuarioList, Index.edit, Index.delete);
 		}
 	},
+    //editar os campos do usuario(aluno)
+ 
+        	edit: function(nome) {
+		if(confirm("Você deseja editar o usuário " + nome + " ?")) {
+			var usuario = UsuarioDAO.get(nome);
+			if (usuario) {
+				var form = document.getElementById('form');
+                    form.nome.value = usuario.nome;
+                    form.tcc.value = usuario.tcc;
+                    form.orientador.value = usuario.orientador;
+    
+            }
+        }
+},
