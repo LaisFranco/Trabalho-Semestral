@@ -64,3 +64,23 @@ var Index = {
             }
         }
 },
+
+    //deletar o usuario(aluno)
+
+delete: function(nome, element) {
+		if(confirm("Você deseja deletar o usuário " + nome + " ?")) {
+			var usuario = UsuarioDAO.get(nome);
+			if (usuario) {
+				if(UsuarioDAO.delete(nome)) {
+					var row = element.parentNode.parentNode;
+					row.parentNode.removeChild(row);
+				}
+			}	
+		}
+	}
+};
+
+
+//initialization
+UsuarioDAO.unserializeAndParse();
+Index.init();
