@@ -18,6 +18,7 @@ var TableController = {
                 row.cells[index++].innerHTML = item.nome;
                 row.cells[index++].innerHTML = item.tcc;
                 row.cells[index++].innerHTML = item.orientador;
+				row.cells[index++].innerHTML = item.situacao;
                 
 				TableController.createActions(row.cells[index++], item, editCallback, deleteCallback);
                 
@@ -40,6 +41,7 @@ var TableController = {
 	
 	createNewRow: function() {
 		var row = document.createElement('tr');
+		row.appendChild(document.createElement('td'));
 		row.appendChild(document.createElement('td'));
 		row.appendChild(document.createElement('td'));
 		row.appendChild(document.createElement('td'));

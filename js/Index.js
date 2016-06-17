@@ -26,7 +26,7 @@ var Index = {
         usuario.nome = form.nome.value;
         usuario.tcc = form.tcc.value;
         usuario.orientador = form.orientador.value;
-        
+        usuario.situacao = document.querySelector('input[name="situacao"]:checked').value;      
         if (UsuarioDAO.save(usuario/*, TableController.setTable()*/) == UsuarioDAO.NEW) {
            TableController.addItem(usuario,Index.edit,Index.delete);
         } else{ 
@@ -60,6 +60,7 @@ var Index = {
                     form.nome.value = usuario.nome;
                     form.tcc.value = usuario.tcc;
                     form.orientador.value = usuario.orientador;
+                    form.situacao.value = usuario.situacao;
     
             }
         }
