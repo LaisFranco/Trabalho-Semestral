@@ -1,18 +1,17 @@
+
+
+
 /* CSS Document */
 
-.dados {
+.dados > usuarios-form {
 	width: 400px;
-	margin: 20px auto;
+	margin: 50px auto;
 }
+
 .tabela-usuario .control-label {
-	width: 50px;
+	width: 100px;
 }
 
 .tabela-usuario .controls {
-  margin-left: 60px;
+  margin-left: 110px;
 }
-
-#tabela-usuario .btn {
-	margin-right: 4px;
-}
-

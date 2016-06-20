@@ -11,7 +11,8 @@ var TableController = {
 
 	addItem: function(item, editCallback, deleteCallback) {
 		if(item) {
-			var tbody = TableController.table.tBodies[0],
+			var
+			 tbody = TableController.table.tBodies[0],
 			    row = TableController.createNewRow(),
 			    index = 0;
                 
